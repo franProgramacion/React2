@@ -1,0 +1,19 @@
+.cabecera{
+    background-color: indianred;
+}
+.imag{
+    display: flex;
+    justify-content: flex-start;
+}
+.Navbar{
+    display: flex;
+    justify-content: center;
+    background-color: orangered;
+    height: 40px;
+}
+.botones{
+    margin-left: 100px;
+    background-color: aliceblue;
+    padding: 10px;
+    
+}
