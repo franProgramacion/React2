@@ -1,5 +1,6 @@
-import './Navbar.css'
-const Navbar =() => {
+import './NavBar.css'
+import CartWidget from '../componentes/CartWidget'
+const NavBar =() => {
     return (
         <nav>
             <div class='gridContainerResponsive'className="cabecera">
@@ -10,9 +11,10 @@ const Navbar =() => {
                 <button  className="botones" >Desodorantes</button>
                 <button  className="botones" >Cuidados diarios</button>
                 <button  className="botones" >Jabones</button>
+                <CartWidget/>
                 </div>
             </div>
         </nav>
     )
 }
-export default Navbar
+export default NavBar;
