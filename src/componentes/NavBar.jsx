@@ -3,7 +3,7 @@ import CartWidget from '../componentes/CartWidget'
 const NavBar =() => {
     return (
         <nav>
-                <div class='gridContainerResponsive'className="Navbar">
+                <div className='gridContainerResponsive Navbar'>
                     <button  className="botones" >Perfumes</button>
                     <button  className="botones" >Desodorantes</button>
                     <button  className="botones" >Cuidados diarios</button>

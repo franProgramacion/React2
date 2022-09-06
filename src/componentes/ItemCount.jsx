@@ -18,9 +18,12 @@ const ItemCount = ({stock, initial, onAdd}) => {
        }
     }
 
-    const agregarProd = (cantidad) =>{
-        setItemStock (itemStock - cantidad);
-        setItemAdd (itemAdd + cantidad);
+    const agregarProd = () =>{
+        if (cantidad <= itemStock){
+            setItemStock (itemStock - cantidad);
+            setItemAdd (itemAdd + cantidad);
+        }
+        
     }
     return(
 
@@ -29,11 +32,12 @@ const ItemCount = ({stock, initial, onAdd}) => {
             <div className="col-md-3">
                 <p>Nombre del producto</p>
             <div className="input-group mb-3">
-                <button className="btn btn-outline-secondary" type="button" id="button-addon1" value="-" onClick={() => decremento(cantidad - 1)}>-</button>
+                <button className="btn btn-outline-secondary" type="button" id="button-addon1" value="-" onClick={() => {decremento(cantidad - 1)}}>-</button>
                 <input type="text" className="form-control" value={cantidad}/>
-                <button class="btn btn-outline-secondary" type="button" id="button-addon1" value="+" onClick={() => incremento(cantidad + 1)}>+</button>
+                <button className="btn btn-outline-secondary" type="button" id="button-addon1" value="+" onClick={() => {incremento(cantidad + 1)}}>+</button>
             </div>
             <input type="button" className="btn btn-primary" value="Agregar al carrito" onClick={() => {agregarProd()}}/>
+            <p>Productos seleccionados: {itemAdd}</p>
             </div>
         </div>
         
