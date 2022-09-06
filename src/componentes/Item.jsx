@@ -3,7 +3,7 @@ import React from 'react';
 
 const Item = ({id, nombre, imagen, precio}) =>{
     return(
-        <div className='col-md-3 py-5'>
+        <div>
             <div className="card">
                 <img src={imagen} className="card-img-top" alt={nombre}/>
                     <div className="card-body">

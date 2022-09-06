@@ -37,7 +37,7 @@ useEffect(() => {
 
     promesa.then((respuesta) => {
         setItems(respuesta);
-
+        console.log(respuesta);
     }); 
  }, []);
 

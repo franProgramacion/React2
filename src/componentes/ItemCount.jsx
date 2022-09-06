@@ -33,7 +33,7 @@ const ItemCount = ({stock, initial, onAdd}) => {
                 <p>Nombre del producto</p>
             <div className="input-group mb-3">
                 <button className="btn btn-outline-secondary" type="button" id="button-addon1" value="-" onClick={() => {decremento(cantidad - 1)}}>-</button>
-                <input type="text" className="form-control" value={cantidad}/>
+                <input type="text" className="form-control" value={cantidad} onChange={() =>{}}/>
                 <button className="btn btn-outline-secondary" type="button" id="button-addon1" value="+" onClick={() => {incremento(cantidad + 1)}}>+</button>
             </div>
             <input type="button" className="btn btn-primary" value="Agregar al carrito" onClick={() => {agregarProd()}}/>
