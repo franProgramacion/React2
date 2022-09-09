@@ -4,7 +4,10 @@ import ItemListContainer from './componentes/ItemListContainer';
 import ItemCount from './componentes/ItemCount';
 import Header from './componentes/Header';
 
+
+//Componentes. ItemCount pasa por props los valores de stock, initial y onAdd al componente itemCount
 function App() {
+ 
   return ( 
     <div className="App">
           <Header/>
@@ -16,3 +19,4 @@ function App() {
 }
 
 export default App;
+

@@ -1,7 +1,7 @@
 import './Header.css'
 import Logo from '../Assets/Logo.png'
 
-
+//Cabecera. El logo es recibido a traves de props y no a traves de una url
 const Header =() => {
     return (
             <div className='gridContainerResponsive cabecera'>

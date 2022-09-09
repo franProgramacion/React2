@@ -1,6 +1,6 @@
 import React from 'react';
 
-
+//Recibe por props el nombre, precio e imagen de cada producto (desde itemList) y construye una card para mostrar los productos en pantalla
 const Item = ({id, nombre, imagen, precio}) =>{
     return(
         <div>

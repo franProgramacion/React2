@@ -31,9 +31,17 @@ useEffect(() => {
 
     const promesa = new Promise ((resolve,reyect) => {
         setTimeout(() => {
-            resolve(catalogo);
-        }, 2000);
+            if (true) {
+                resolve(catalogo);
+            } else {
+                reyect ("Error en la carga de datos");
+            }
+        },2000);
+            
+    }).catch (error => {
+        console.log("Error: " + error);
     });
+
 
     promesa.then((respuesta) => {
         setItems(respuesta);
