@@ -3,6 +3,7 @@ import Item from './Item';
 
 //Map: iteracion del arreglo de items. Realiza un recorrido del arreglo de objetos (construido en itemListContainer) buscando el nombre, imagen y precio de cada producto. Guarda esos valores en variables y los pasa por props al componente item
 const ItemList = ({items}) =>{
+
     return(
         <div className='row'>
             {items.map(item => (
