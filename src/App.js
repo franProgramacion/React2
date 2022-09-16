@@ -21,7 +21,6 @@ function App() {
             <Route path='/item/:id' element={<ItemDetailContainer />} /> 
           </Routes>
           
-
     </div>
   );
 }
