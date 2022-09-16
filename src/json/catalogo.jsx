@@ -1,4 +1,4 @@
-
+const catalogo = 
 [
     {"nombre": "todoDia", "precio": 2200, "tipo":"Frambuesa y pimienta rosa", "id": 1, "imagen":"https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQ_cyFRrcIg0goQd9ik8-C7yOH-zkuj0sbN6daiNIHVqEXS0hipKh3xmJXkLwbvDkI-KWo4IJ4ibg&usqp=CAc"},
     {"nombre": "tododia", "precio": 2200,"tipo":"Cereza y Avellana", "id": 2, "imagen":"https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcSonifQviHwjKpXprn3DrQeOGCkmbujgWDlkLmAoLrb-jgN_ehF4LgV22v3bkUSVbPjno6U3oTeLA&usqp=CAc"},
@@ -16,3 +16,5 @@
     {"nombre": "Biografia", "precio": 2200,"tipo":"Inspire", "id": 4, "imagen": "https://fraguru.com/mdimg/perfume/375x500.47151.jpg"}
 
 ]
+
+export default catalogo;
