@@ -4,8 +4,7 @@ import { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import ItemList from './ItemList';
 import './ItemListContainer.css';
-
-
+import catalogo from '../json/catalogo';
 
 const ItemListContainer = () => {
 
@@ -13,41 +12,48 @@ const [items, setItems] = useState([]);
 const {tipo} = useParams();
 
 useEffect(() => {
-let categoria = "";
-    if (tipo === "perfumeria") {
-        categoria = "perfumeria";
-     } else if (tipo ==="desodorantes") {
-        categoria = "desodorantes";
-     } else if (tipo ==="cremas") {
-         categoria = "cuidados-diarios"; 
-     }
-         else if (tipo ==="jabones") {
-             categoria = "jabones"; }
-         else {
-        categoria = "all";
-     }
+    let categoria = "";
 
-    fetch ("../json/catalogo.json")
-    .then(response => response.json())
-    .then (json => {
-        if (categoria === "all"){
-            setItems(json)
+    if (tipo === "perfumeria") {
+       categoria = "perfumeria";
+    } else if (tipo ==="desodorantes") {
+       categoria = "desodorantes";
+    } else if (tipo ==="cremas") {
+        categoria = "cuidados-diarios"; 
+    }
+        else if (tipo ==="jabones") {
+            categoria = "jabones"; }
+        else {
+       categoria = "all";
+    }
+    
+    const promesa = new Promise ((resolve,reyect) => {
+        setTimeout(() => {
+            if (true) {
+                resolve(catalogo);
+            } else {
+                reyect ("Error en la carga de datos");
+            }
+        },2000);
+            
+    }).catch (error => {
+        console.log("Error: " + error);
+    });
+
+
+    promesa.then((respuesta) => {
+        
+        if (categoria ==="all"){
+            setItems(respuesta);
+            console.log(respuesta);                    
         } else {
-            console.log(categoria);
-            const arrayProd = json.filter(catalogo => catalogo.tipoProd === categoria);
+            const arrayProd = catalogo.filter(catalogo => catalogo.tipoProd === categoria);
             setItems(arrayProd);
         }
         
-        
+    }); 
+ }, [tipo]);
 
-      
-    });
-       
-}, [tipo]);
-
-   
-    
-    
     return(
         <div className='container'>
             <ItemList items={items}/>
@@ -57,3 +63,4 @@ let categoria = "";
     }
 
 export default ItemListContainer;
+

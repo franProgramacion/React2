@@ -1,3 +1,4 @@
+const catalogo = 
 [
     {"id": 1, "nombre": "todoDia", "precio": 2200, "tipoProd":"perfumeria",  "imagen":"https://staticar.natura.com/cdn/ff/eFksrPOPIWKjB2L2Py7D2sI2gj913v0Eacpwl-senAA/1659738667/public/products/76383_1_15.jpg"},
     {"id": 2, "nombre": "tododia", "precio": 2200,"tipoProd":"perfumeria", "imagen":"https://staticar.natura.com/cdn/ff/AUWHzmSTUQW-do89bESCfvvp9xxc7W2xqBEUpH_8nnA/1661798648/public/products/95841_1_8.jpg"},
@@ -26,3 +27,5 @@
     {"id": 25, "nombre": "Natura Erva Doce desodorante","tipoProd":"desodorantes", "precio": 725,"imagen": "https://staticar.natura.com/cdn/ff/ugVBjdGK396lKsj3EFz-YfzyQfCGIaALPmaOgALB5tM/1662491858/public/styles/medium/public/products/2179_1_14.jpg?itok=Py2hXg3M"}
 
 ]
+
+export default catalogo;
